@@ -1,0 +1,32 @@
+import { useState } from "react";
+
+export const useForm = (inicialForm = {}) => {
+  const [formState, setFormState] = useState(inicialForm);
+
+  const onInputChange = ({ target }) => {
+    const { name, value } = target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // const onResetForm = () => {
+  //   setFormState({
+  //     ...formState,
+  //     username: "",
+  //     email: "",
+  //     password: "",
+  //   });
+  // };
+
+  const onResetForm = () => {
+    setFormState( inicialForm );
+  };
+
+  return {
+    ...formState,
+    onInputChange,
+    onResetForm,
+  };
+};
