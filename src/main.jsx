@@ -12,10 +12,12 @@ import { MemoHook } from "./06-memos/Memohook";
 // import { Layout } from "./05-useLayoutEffect/Layout";
 //import { Memorize } from "./06-memos/Memorize";
 
+import { Padre } from "./07-tarea-memo/Padre";
+
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   //<React.StrictMode>
-  <CallbackHook />
+  <Padre />
   //</React.StrictMode>
 );
