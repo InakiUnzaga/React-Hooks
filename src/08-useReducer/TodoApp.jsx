@@ -1,8 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import { TodoAdd } from "./TodoAdd";
 import { TodoList } from "./TodoList";
-import { useTodo } from "../hooks/useTodo";
-
+import { useTodo } from "../hooks";
 
 export const TodoApp = () => {
   const { todos, handleNewTodo, HandleDeleteTodo, onToggleTodo } = useTodo();
