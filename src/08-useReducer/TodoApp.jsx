@@ -4,13 +4,20 @@ import { TodoList } from "./TodoList";
 import { useTodo } from "../hooks";
 
 export const TodoApp = () => {
-  const { todos, handleNewTodo, HandleDeleteTodo, onToggleTodo } = useTodo();
+  const {
+    todos,
+    todosCount,
+    pendingTodosCount,
+    handleNewTodo,
+    HandleDeleteTodo,
+    onToggleTodo,
+  } = useTodo();
 
-  console.log(todos);
   return (
     <>
       <h1>
-        TodoApp:10 ,<small> pendientes: 2</small>
+        TodoApp: {todosCount} ,
+        <small> pendientes: {pendingTodosCount}</small>
       </h1>
       <hr />
 

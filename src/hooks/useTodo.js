@@ -33,5 +33,16 @@ export const useTodo = () => {
     });
   };
 
-  return { todos, onToggleTodo, HandleDeleteTodo, handleNewTodo };
+  const todosCount = todos.length;
+
+  const pendingTodosCount = todos.filter((todo) => !todo.done).length;
+
+  return {
+    todos,
+    onToggleTodo,
+    HandleDeleteTodo,
+    handleNewTodo,
+    todosCount,
+    pendingTodosCount,
+  };
 };
