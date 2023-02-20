@@ -29,6 +29,7 @@ export const TodoAdd = ({ onNewTodo }) => {
         name="description"
         value={description}
         onChange={onInputChange}
+        autoComplete="off"
       />
       <button type="submit" className="btn btn-outline-primary mt-1">
         Agregar
